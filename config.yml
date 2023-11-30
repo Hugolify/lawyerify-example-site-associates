@@ -1,0 +1,34 @@
+module:
+  mounts:
+    - source: assets
+      target: assets
+    - source: content
+      target: content
+    - source: data
+      target: data
+    - source: layouts
+      target: layouts
+
+permalinks:
+  expertises: /expertises/:slug/
+  persons: /cabinet/:slug/
+  persons_expertises: /cabinet/expertises/:slug/
+  persons_statutes: /cabinet/status/:slug/
+  publications: /actualites/:year-:month-:day-:slug/
+  publications_categories: /actualites/categories/:slug/
+  publications_expertises: /actualites/expertises/:slug/
+  publications_persons: /actualites/avocats/:slug/
+
+params:
+  _merge: deep
+  expertises:
+    _merge: deep
+    thumbnail:
+      _merge: deep
+      desktop: '636x273'
+  persons:
+    _merge: deep
+    thumbnail:
+      _merge: deep
+      desktop: "306x372"
+      mobile: "300x365"
